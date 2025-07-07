@@ -1,19 +1,19 @@
 ifeq ($(OS),Windows_NT)
 	os := windows
 	fname_no_ext := up
-    output := $(fname_no_ext).exe
-    CAT := type
-    COPY := copy
-    DEL := del
+	output := $(fname_no_ext).exe
+	CAT := type
+	COPY := copy
+	DEL := del
 	DEST := c:\\utils
 else
 	os := linux
 	fname_no_ext := up
-    output := $(fname_no_ext)
-    CAT := cat
-    COPY := cp
-    DEL := rm -f
-    DEST := $(HOME)/Dropbox/d_lang/_bin
+	output := $(fname_no_ext)
+	CAT := cat
+	COPY := cp
+	DEL := rm -f
+	DEST := $(HOME)/Dropbox/d_lang/_bin
 endif
 
 cat:
