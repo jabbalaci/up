@@ -10,6 +10,7 @@ import std.path; // baseName()
 import std.stdio;
 import std.string;
 
+enum VERSION = "0.1";
 enum PREFIX = "lattam";
 
 string zfill(const string s, const size_t width)
@@ -40,11 +41,26 @@ void process_arg(const string arg, const size_t no_of_entries)
     writefln("%s/ was created", dname);
 }
 
+void print_help()
+{
+    const text = format("
+up v%s by Jabba Laci (jabba.laci@gmail.com), 2025
+https://github.com/jabbalaci/up
+".strip(), VERSION);
+    writeln(text);
+}
+
 void main(const string[] args)
 {
     const entries = dirEntries(".", format("%s_*", PREFIX), SpanMode.shallow).map!(
             e => e.baseName).array;
 
+    if (args.canFind("-h") || args.canFind("--help"))
+    {
+        print_help();
+        exit(0);
+    }
+    // else:
     if (args.length > 1)
     {
         process_arg(args[1], entries.length);
