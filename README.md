@@ -1,9 +1,9 @@
-# UP
+# 🔼 UP
 
 A simple command-line application that
 allows you to follow easily which episode comes next.
 
-## Problem
+## 🆙 Problem
 
 Imagine that you are watching a TV show and
 this is the content of the current directory:
@@ -23,7 +23,7 @@ episode-010.mp4
 
 You watch episode 5 and then you take a pause. A few days later, you want to continue, but you have no idea where you left off. Sounds familiar?
 
-## Solution
+## 👍 Solution
 
 Execute the binary `up` and it'll create
 an empty subfolder. First, it is called
@@ -44,7 +44,7 @@ And it'll create the subfolder `seen_08/`.
 Use it only for initialization. After that,
 just launch `up` without any arguments.
 
-## Compiling
+## ⬆️ Compiling
 
 The project is written in [D](https://dlang.org/). You can use any D compiler. Here is
 an example with the reference compiler:
@@ -59,6 +59,6 @@ Or, you can also use the provided `Makefile`:
 $ make release
 ```
 
-## Tested platforms
+## 🔺 Tested platforms
 
 I tried it under Linux and Windows only.
